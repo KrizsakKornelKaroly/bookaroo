@@ -1,0 +1,43 @@
+<div class="register-wrapper d-flex align-items-center justify-content-center">
+    <div class="registration-card p-3 col-lg-6">
+
+        <h2 class="text-center mb-4">Regisztráció</h2>
+        <p class="text-center mb-4 subtitle">Foglalj kényelmesen, bárhol, bármikor</p>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Username">
+            <label for="name">Név <em>*</em></label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="example@example.com">
+            <label for="email">E-mail cím <em>*</em></label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" placeholder="">
+            <label for="password">Jelszó <em>*</em></label>
+        </div>
+
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="confirm" placeholder="">
+            <label for="confirm">Jelszó újra <em>*</em></label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="acceptTerms">
+            <label class="form-check-label" for="acceptTerms">
+                Általános feltételek elfogadása <em>*</em>
+            </label>
+        </div>
+
+        <button class="btn btn-primary w-100 mb-2" (click)="registration()">
+            <i class="bi bi-person-fill-add"></i> Regisztráció
+        </button>
+
+        <button class="btn btn-outline-light w-100" routerLink="/login">
+            Már van fiókod? Belépés
+        </button>
+
+    </div>
+</div>
