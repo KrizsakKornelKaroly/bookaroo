@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/system/navbar/navbar.component';
 import { FooterComponent } from './components/system/footer/footer.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,4 +13,5 @@ import { FooterComponent } from './components/system/footer/footer.component';
 })
 export class AppComponent {
   title = 'Bookaroo_fe';
+
 }
