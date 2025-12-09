@@ -1,18 +1,44 @@
 <div class="col-7 mx-auto">
 
-    <div class="row" style="background-color: purple;">
+    <div class="row titleRow">
         <div class="col-4">
             <h3 class="mt-5">Foglald le álmaid szállását!</h3>
             <p>Egyszerűen, gyorsan, megbízhatóan.</p>
 
-            <form action="">
+            <form action="" class="d-flex flex-column gap-3 justify-content-center align-items-center">
 
-                
+                <p-floatlabel variant="on">
+                    <input pInputText id="city" autocomplete="off" />
+                    <label for="city">Település</label>
+                </p-floatlabel>
+
+                <p-floatlabel variant="on">
+                    <p-datepicker id="arrival" [iconDisplay]="'input'" [showIcon]="true" dateFormat="yy-mm-dd"/>
+                    <label for="arrival">Érkezés</label>
+                </p-floatlabel>
+
+                <p-floatlabel variant="on">
+                    <p-datepicker id="leave" [iconDisplay]="'input'" [showIcon]="true" dateFormat="yy-mm-dd" />
+                    <label for="leave">Távozás</label>
+                </p-floatlabel>
+
+                <p-inputnumber id="persons" [showButtons]="true" buttonLayout="horizontal" spinnerMode="horizontal" [step]="1" min="1" suffix=" fő" >
+                    <ng-template pTemplate="incrementbuttonicon">
+                        <span class="bi bi-plus"></span>
+                    </ng-template>
+                    <ng-template pTemplate="decrementbuttonicon">
+                        <span class="bi bi-dash"></span>
+                    </ng-template>
+                    <label for="persons">Személyek száma</label>
+                </p-inputnumber>
+
+
+                <p-button label="Submit" />
             </form>
 
         </div>
-        <div class="col-8">
-            <img src="titlebarBg.png" alt="" width="100%"> 
+        <div class="col-8 pe-0">
+            <img src="titlebarBg.png" alt="" width="100%" class="rounded-end"> 
         </div>
     </div>
 </div>
