@@ -1,53 +1,55 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand col-3">
-        <img src="{{environment.logo}}" alt="Bookaroo logo" class="logoImg">
-        {{environment.title}}
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
+<nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand col-3 ms-5">
+      <img src="{{environment.logo}}" alt="Bookaroo logo" class="logoImg">
+      {{environment.title}}
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
+        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
+          <a class="nav-link active mainNavLink" aria-current="page" href="#">Főoldal</a>
+        </li>
+
+        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
+          <a class="nav-link active mainNavLink" aria-current="page" href="#">Szállások</a>
+        </li>
+
+
+        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
+          <a class="nav-link active mainNavLink" aria-current="page" href="#">Szállások kezelése</a>
+        </li>
+
+
+        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
+          <a class="nav-link active mainNavLink" aria-current="page" href="#">Foglalások</a>
+        </li>
+
+
+        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
+          <a class="nav-link active mainNavLink" aria-current="page" href="#">Naptár</a>
+        </li>
+
+      </ul>
+
+
+      <div class="col-sm-12 col-lg-2 secondNav">
+        <ul class="navbar-nav mb-lg-0">
+
           <li class="nav-item mb-sm-3 mb-lg-0">
-            <a class="nav-link active" aria-current="page" href="#">Főoldal</a>
+            <a class="nav-link active fs-2" aria-current="page" href="#"><i class="bi bi-person-circle"></i></a>
           </li>
-          
+
           <li class="nav-item mb-sm-3 mb-lg-0">
-            <a class="nav-link active" aria-current="page" href="#">Szállások</a>
-          </li>
-
-          
-          <li class="nav-item mb-sm-3 mb-lg-0">
-            <a class="nav-link active" aria-current="page" href="#">Szállások kezelése</a>
-          </li>
-
-          
-          <li class="nav-item mb-sm-3 mb-lg-0">
-            <a class="nav-link active" aria-current="page" href="#">Foglalások</a>
-          </li>
-
-          
-          <li class="nav-item mb-sm-3 mb-lg-0">
-            <a class="nav-link active" aria-current="page" href="#">Naptár</a>
-          </li>
-
-        </ul>
-
-        
-      </div>
-      <div class="col-3">
-        <ul class="navbar-nav mb-lg-0 d-flex align-items-end justify-content-end me-5">
-          <li class="nav-item mb-sm-3 mb-lg-0 secondNav">
-            <a class="nav-link active" aria-current="page" href="#">Kijelentkezés</a>
-          </li>
-
-          
-          <li class="nav-item mb-sm-3 mb-lg-0 secondNav">
-            <a class="nav-link active" aria-current="page" href="#">Profil</a>
+            <a class="nav-link active fs-2" aria-current="page" href="#"><i class="bi bi-box-arrow-right"></i></a>
           </li>
 
         </ul>
       </div>
     </div>
-  </nav>
+
+  </div>
+</nav>
