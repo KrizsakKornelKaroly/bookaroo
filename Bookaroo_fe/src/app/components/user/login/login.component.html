@@ -1,1 +1,39 @@
-<p>halo</p>
+<div class="login-wrapper d-flex align-items-center justify-content-center">
+    <div class="login-card p-3 col-lg-6">
+
+        <h2 class="text-center mb-4">Üdv újra!</h2>
+        <p class="text-center mb-4 subtitle"><i class="bi bi-door-open"></i>&nbsp;Lépj be, és foglalj tovább</p>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="">
+            <label for="email"><i class="bi bi-envelope-at"></i>&nbsp;E-mail cím <em>*</em></label>
+        </div>
+
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="password" placeholder="">
+            <label for="password"><i class="bi bi-lock"></i>&nbsp;Jelszó <em>*</em></label>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberme">
+                <label class="form-check-label" for="rememberme">
+                    Emlékezz rám
+                </label>
+            </div>
+
+            <a class="forgot-link" routerLink="/lostpass">
+                Elfelejtettem a jelszavam
+            </a>
+        </div>
+
+        <button class="btn btn-primary w-100 mb-2" (click)="login()">
+            <i class="bi bi-box-arrow-in-right"></i>&nbsp;Belépés
+        </button>
+
+        <button class="btn btn-outline-light w-100" routerLink="/registration">
+            <i class="bi bi-person-fill-add"></i>&nbsp;Regisztráció
+        </button>
+
+    </div>
+</div>
