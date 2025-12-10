@@ -1,9 +1,9 @@
 <div class="col-7 mx-auto">
 
-    <div class="row titleRow mb-3">
-        <div class="col-4">
+    <div class="row titleRow mb-3 rounded-start">
+        <div class="col-12 col-xxl-5 d-flex flex-column gap-3 justify-content-center align-items-center mb-3">
             <h3 class="mt-5 text-center">Foglald le álmaid szállását!</h3>
-            <p class="text-center">Egyszerűen, gyorsan, megbízhatóan.</p>
+            <p class="text-center subtitle">Egyszerűen, gyorsan, megbízhatóan.</p>
 
             <form action="" class="d-flex flex-column gap-3 justify-content-center align-items-center">
 
@@ -33,12 +33,46 @@
                 </p-inputnumber>
 
 
-                <p-button label="Keresés" />
+                <p-button label="Keresés" [raised]="true" class="btn-primary"/>
             </form>
 
         </div>
-        <div class="col-8 pe-0">
-            <img src="titlebarBg.png" alt="" width="100%" class="rounded-end"> 
+        <div class="col-12 col-xxl-7 d-flex mb-sm-3 mb-xxl-0 justify-content-center align-items-center">
+            <img src="titlebarBg.png" alt="" width="100%" class="rounded" > 
         </div>
+    </div>
+
+
+    <div>
+
+        <h2 class="mt-5">Fedezze fel városainkat!</h2>
+
+        <p-carousel
+    [value]="products"
+    [numVisible]="3"
+    [numScroll]="1"
+    [responsiveOptions]="responsiveOptions">
+        <ng-template let-product #item>
+            <div class="m-2 p-2">
+                <div class="mb-2">
+                    <div class="relative mx-auto">
+                        <img
+                            src="{{ product.image }}"
+                            [alt]="product.name"
+                            class="w-full rounded-border" />
+                    </div>
+                </div>
+                <div class="mb-2 font-medium text-center">
+                    {{ product.name }}
+                </div>
+                <!--
+                <div class="flex justify-between items-center">
+                    <span>
+                        <p-button [outlined]="true" label="Felfedezés" />
+                    </span>
+                </div>-->
+            </div>
+        </ng-template>
+</p-carousel>
     </div>
 </div>
