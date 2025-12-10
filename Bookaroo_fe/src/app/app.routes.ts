@@ -3,12 +3,10 @@ import { LoginComponent } from './components/user/login/login.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
 import { MainComponent } from './components/system/main/main.component';
 import { NotfoundComponent } from './components/system/notfound/notfound.component';
+import { AccommodationListComponent } from './components/user/accommodation-list/accommodation-list.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        component: MainComponent
-    },
+    // user
     {
         path: 'login',
         component: LoginComponent
@@ -18,7 +16,16 @@ export const routes: Routes = [
         component: RegistrationComponent
     },
 
+    {
+        path: 'accommodation-list',
+        component: AccommodationListComponent
+    },
 
+    // general
+    {
+        path: '',
+        component: MainComponent
+    },
     {
         path: '**',
         component: NotfoundComponent

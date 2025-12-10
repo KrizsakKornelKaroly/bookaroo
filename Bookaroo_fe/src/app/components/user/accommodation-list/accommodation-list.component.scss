@@ -1,0 +1,41 @@
+.table-wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 15px;
+}
+
+.table-card {
+    background: rgba(46, 46, 46, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    border: 1px solid rgba(150, 73, 203, 0.25);
+    box-shadow: 0 0 35px rgba(127, 7, 153, 0.25);
+    color: #e8e8e8;
+    animation: fadeInUp .6s ease;
+}
+
+td, th {
+    background-color: transparent
+}
+
+th, .subtitle {
+    color: #AFBBF2;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+    text-shadow: 1px 1px 2px black;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
