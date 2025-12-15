@@ -13,6 +13,15 @@
     animation: fadeInUp .6s ease;
 }
 
+:host ::ng-deep {
+    --p-select-focus-border-color: #D3FFF3 !important;
+    --p-input-focus-border-color: #D3FFF3 !important;
+    --p-button-focus-border-color: #D3FFF3 !important;
+    --p-form-field-float-label-focus-color: #D3FFF3 !important;
+    --p-focus-ring-color: #D3FFF3 !important;
+    --p-inputtext-focus-border-color: #D3FFF3 !important;
+}
+
 
 :host ::ng-deep .p-inputtext  {
     background: #1b1b1b;
@@ -39,8 +48,10 @@ h3 {
     border-radius: 5px;
 }
 
-
-
+.cardAd{
+    width: 23%;
+    height: auto;
+}
 :host ::ng-deep .p-button {
     color: #e8e8e8;
     background: #7F0799;
