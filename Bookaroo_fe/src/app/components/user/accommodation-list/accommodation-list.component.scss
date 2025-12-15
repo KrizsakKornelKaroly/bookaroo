@@ -28,6 +28,33 @@ h2 {
     text-shadow: 1px 1px 2px black;
 }
 
+.fill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background: #7F0799;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #9649CB;
+    box-shadow: 0 0 12px rgba(150, 73, 203, 0.6);
+}
+
+.btn-outline-light {
+    border: 1px solid #AFBBF2;
+}
+
+.btn-outline-light:hover {
+    background: #AFBBF2;
+    color: #000;
+}
+
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -39,3 +66,27 @@ h2 {
         transform: translateY(0);
     }
 }
+
+// PrimeNG
+:host ::ng-deep .p-select  {
+    background: #1b1b1b;
+    border: 1px solid rgba(150, 73, 203, 0.3);
+    border-radius: 5px;
+    color: #e8e8e8;
+    width: 100%;
+}
+
+:host ::ng-deep .p-select:hover {
+    border: 1px solid #AFBBF2;
+}
+
+:host ::ng-deep .p-select:focus-within,
+:host ::ng-deep .p-select .p-inputtext:focus,
+:host ::ng-deep .p-select .p-dropdown-label:focus,
+:host ::ng-deep .p-select .p-inputtext:scope,
+:host ::ng-deep .p-select .p-dropdown-label:scope {
+    border-color: #D3FFF3;
+    box-shadow: 0 0 12px rgba(211, 255, 243, 0.6);
+    outline: none;
+}
+

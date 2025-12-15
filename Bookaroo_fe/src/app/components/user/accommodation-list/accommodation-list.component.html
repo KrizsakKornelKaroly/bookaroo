@@ -5,27 +5,44 @@
 
         <div class="row">
             <div class="col-lg-4">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <div class="justify-center form-floating mb-3">
+                    <p-select [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name" [showClear]="true" id="select-country" placeholder="Válasszon országot!">
+                        <ng-template #selectedItem let-selectedOption>
+                            <div class="flex items-center gap-2">
+                                <div>{{ selectedOption.name }}</div>
+                            </div>
+                        </ng-template>
+                        <ng-template let-country #item>
+                            <div class="flex items-center gap-2">
+                                <div>{{ country.name }}</div>
+                            </div>
+                        </ng-template>
+                    </p-select>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+
+                <div class="justify-center form-floating mb-3">
+                    <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [filter]="true" filterBy="name" [showClear]="true" id="select-city" placeholder="Válasszon települést!">
+                        <ng-template #selectedItem let-selectedOption>
+                            <div class="flex items-center gap-2">
+                                <div>{{ selectedOption.name }}</div>
+                            </div>
+                        </ng-template>
+                        <ng-template let-city #item>
+                            <div class="flex items-center gap-2">
+                                <div>{{ city.name }}</div>
+                            </div>
+                        </ng-template>
+                    </p-select>
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+
+                <button type="submit" class="btn btn-primary w-100 mb-4"><i class="bi bi-search"></i>&nbsp;Keresés</button>
             </div>
 
             <div class="col-lg-8 align-items-center">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 w-100">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="https://media.istockphoto.com/id/695733614/photo/white-male-call-duck.jpg?s=612x612&w=0&k=20&c=JB1qeE_J-yQ35CkgLLl6qHAuDWE0DLZmtqUYJyZU2Ts=" class="img-fluid rounded-start" alt="...">
+                            <img src="https://media.istockphoto.com/id/695733614/photo/white-male-call-duck.jpg?s=612x612&w=0&k=20&c=JB1qeE_J-yQ35CkgLLl6qHAuDWE0DLZmtqUYJyZU2Ts=" class="img-fluid rounded-start w-100 h-100 fill" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
