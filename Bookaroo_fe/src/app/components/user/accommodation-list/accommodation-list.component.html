@@ -4,7 +4,7 @@
         <p class="text-center mb-4 subtitle"><i class="bi bi-house"></i>&nbsp;Böngésszen ajánlatokat szállodáknál, otthonoknál és sok másnál...</p>
 
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-12 col-xxl-4 align-items-center">
                 <div class="justify-center form-floating mb-3">
                     <p-select [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name" [showClear]="true" id="select-country" placeholder="Válasszon országot!">
                         <ng-template #selectedItem let-selectedOption>
@@ -38,17 +38,17 @@
                 <button type="submit" class="btn btn-primary w-100 mb-4"><i class="bi bi-search"></i>&nbsp;Keresés</button>
             </div>
 
-            <div class="col-lg-8 align-items-center">
+            <div class="col-12 col-xxl-8 align-items-center">                
                 <div class="card mb-3 w-100">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="https://media.istockphoto.com/id/695733614/photo/white-male-call-duck.jpg?s=612x612&w=0&k=20&c=JB1qeE_J-yQ35CkgLLl6qHAuDWE0DLZmtqUYJyZU2Ts=" class="img-fluid rounded-start w-100 h-100 fill" alt="...">
+                            <img src="https://media.istockphoto.com/id/695733614/photo/white-male-call-duck.jpg?s=612x612&w=0&k=20&c=JB1qeE_J-yQ35CkgLLl6qHAuDWE0DLZmtqUYJyZU2Ts=" class="img-fluid cardImg">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <a href="">Placeholder cím</a>
-                                <p class="card-text">Ez egy random leírás izébizé ami hosszabb valamiért?</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                <a class="fs-5 p-1">Placeholder cím</a>
+                                <p class="card-text p-1">Ez egy random leírás izébizé ami hosszabb valamiért?</p>
+                                <p class="card-text p-1"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
 
         <br>
 
-        <p>Oldalonként x; Összesen <span style="padding: 0px;">y</span></p>
+        <p class="paginatorText">Oldalonként 10; Összesen <span style="padding: 0px;">y</span></p>
         <!-- TODO: paginator ide -->
     </div>
 </div>
