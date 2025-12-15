@@ -1,6 +1,6 @@
 <div class="col-7 mx-auto">
 
-    <div class="row titleRow mb-3 rounded-start">
+    <div class="row titleRow mb-3 rounded-start mt-5">
         <div class="col-12 col-xxl-5 d-flex flex-column gap-3 justify-content-center align-items-center mb-3">
             <h3 class="mt-5 text-center">Foglald le álmaid szállását!</h3>
             <p class="text-center subtitle">Egyszerűen, gyorsan, megbízhatóan.</p>
@@ -8,21 +8,24 @@
             <form action="" class="d-flex flex-column gap-3 justify-content-center align-items-center">
 
                 <p-floatlabel variant="on">
-                    <input pInputText id="city" autocomplete="off" class="inputFormat"/>
+                    <input pInputText id="city" autocomplete="off" class="inputFormat" />
                     <label for="city">Település</label>
                 </p-floatlabel>
 
                 <p-floatlabel variant="on">
-                    <p-datepicker id="arrival" [iconDisplay]="'input'" [showIcon]="true" dateFormat="yy-mm-dd" class="inputFormat"/>
+                    <p-datepicker id="arrival" [iconDisplay]="'input'" [showIcon]="true" dateFormat="yy-mm-dd"
+                        class="inputFormat" />
                     <label for="arrival">Érkezés</label>
                 </p-floatlabel>
 
                 <p-floatlabel variant="on">
-                    <p-datepicker id="leave" [iconDisplay]="'input'" [showIcon]="true" dateFormat="yy-mm-dd" class="inputFormat" />
+                    <p-datepicker id="leave" [iconDisplay]="'input'" [showIcon]="true" dateFormat="yy-mm-dd"
+                        class="inputFormat" />
                     <label for="leave">Távozás</label>
                 </p-floatlabel>
 
-                <p-inputnumber id="persons" [showButtons]="true" buttonLayout="horizontal" spinnerMode="horizontal" [step]="1" min="1" suffix=" fő" class="inputFormat">
+                <p-inputnumber id="persons" [showButtons]="true" buttonLayout="horizontal" spinnerMode="horizontal"
+                    [step]="1" min="1" suffix=" fő" class="inputFormat">
                     <ng-template pTemplate="incrementbuttonicon" class="inputFormat">
                         <span class="bi bi-plus"></span>
                     </ng-template>
@@ -33,46 +36,95 @@
                 </p-inputnumber>
 
 
-                <p-button label="Keresés" [raised]="true" class="btn-primary"/>
+                <p-button label="Keresés" [raised]="true" class="btn-primary" />
             </form>
 
         </div>
         <div class="col-12 col-xxl-7 d-flex mb-sm-3 mb-xxl-0 justify-content-center align-items-center">
-            <img src="titlebarBg.png" alt="" width="100%" class="rounded" > 
+            <img src="titlebarBg.png" alt="" width="100%" class="rounded">
         </div>
+    </div>
+
+    <div class="pageAd my-5">
+        <p class="ms-2"><sub>Hirdetés</sub></p>
+
+        <h2 class="text-center mt-4">10% kedvezmény minden visszatérő vendég számára!</h2>
+
+        <p class="text-end mt-4 me-2"><sub>A felhasználási feltételek érvényesek.</sub></p>
+    </div>
+
+    <div>
+        <div class="d-flex justify-content-between align-items-center mt-5">
+            <h2 class="mb-0">Fedezze fel városainkat!</h2>
+            <a href="/varosok" class="ms-3">Összes város</a>
+        </div>
+
+
+        <p-carousel [value]="cities" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions"> <!---->
+            <ng-template let-city #item>
+                <div class="m-2 p-2">
+                    <div class="mb-2">
+                        <a class="btn relative" href="/varosok/1">
+                            <img src="{{ city.image }}" [alt]="city.name" class="w-full rounded-border" />
+                            <span class="mt-2 text-center d-block">
+                                {{ city.name }}
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
     </div>
 
 
     <div>
+        <div class="d-flex justify-content-between align-items-center mt-5">
+            <h2 class="mb-0">Kiemelt szállásaink</h2>
+            <a href="/varosok" class="ms-3">Továbbiak</a>
+        </div>
 
-        <h2 class="mt-5">Fedezze fel városainkat!</h2>
 
-        <p-carousel
-    [value]="products"
-    [numVisible]="3"
-    [numScroll]="1"
-    [responsiveOptions]="responsiveOptions">
-        <ng-template let-product #item>
-            <div class="m-2 p-2">
-                <div class="mb-2">
-                    <div class="relative mx-auto">
-                        <img
-                            src="{{ product.image }}"
-                            [alt]="product.name"
-                            class="w-full rounded-border" />
+        <p-carousel [value]="accomodations" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+            <ng-template let-accomodation #item>
+
+
+                <div class="card m-2">
+                    <div class="mb-2">
+                        <div class="relative p-3">
+                            <img src="{{ accomodation.image }}" [alt]="accomodation.name" class="accImg" />
+                            <span class="mt-2 text-start d-block">
+                                {{ accomodation.name }}
+                                <br />
+                                <small class="text-muted">{{ accomodation.address }}</small>
+
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <small class="text-muted">{{ accomodation.capacity }} fő</small>
+                                    <br />
+                                    <small class="text-muted">{{ accomodation.basePrice }} Ft/éj</small>
+
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <p-button label="Foglalás" class="mt-3 btn-primary text-center"></p-button>
+                                </div>
+
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="mb-2 font-medium text-center">
-                    {{ product.name }}
-                </div>
-                <!--
-                <div class="flex justify-between items-center">
-                    <span>
-                        <p-button [outlined]="true" label="Felfedezés" />
-                    </span>
-                </div>-->
-            </div>
-        </ng-template>
-</p-carousel>
+
+
+            </ng-template>
+        </p-carousel>
+
+
+    </div>
+
+
+    <div class="pageAd my-5">
+        <p class="ms-2"><sub>Hirdetés</sub></p>
+
+        <h1 class="text-center mt-4">Garantált pénzvisszatérítési garancia!</h1>
+
+        <p class="text-end mt-4 me-2"><sub>A felhasználási feltételek érvényesek.</sub></p>
     </div>
 </div>

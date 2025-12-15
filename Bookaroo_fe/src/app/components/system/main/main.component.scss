@@ -17,7 +17,7 @@
 :host ::ng-deep .p-inputtext  {
     background: #1b1b1b;
     border: 1px solid rgba(150, 73, 203, 0.3);
-    border-radius: 15px;
+    border-radius: 5px;
     color: #e8e8e8;
     width: 250px !important;
 }
@@ -31,6 +31,14 @@
 h3 {
     text-shadow: 1px 1px 2px black;
 }
+
+.pageAd{
+    background: linear-gradient(45deg, #9649CB 0%, #7F0799 100%);
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+}
+
 
 
 :host ::ng-deep .p-button {
@@ -47,3 +55,7 @@ h3 {
     box-shadow: 0 0 12px rgba(150, 73, 203, 0.6);
 }
 
+:host ::ng-deep .accImg {
+    margin: 0 auto !important;
+    border-radius: 5px;
+}
