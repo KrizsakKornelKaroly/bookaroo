@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Dec 08. 09:26
--- Kiszolgáló verziója: 10.4.28-MariaDB
--- PHP verzió: 8.1.17
+-- Létrehozás ideje: 2025. Dec 16. 09:01
+-- Kiszolgáló verziója: 10.4.32-MariaDB
+-- PHP verzió: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -50,6 +50,9 @@ CREATE TABLE `accomodations` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` varchar(255) NOT NULL,
+  `country` varchar(100) NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `postal` int(11) NOT NULL,
   `address` varchar(100) NOT NULL,
   `capacity` int(11) NOT NULL,
   `basePrice` int(11) NOT NULL,
@@ -61,8 +64,8 @@ CREATE TABLE `accomodations` (
 -- A tábla adatainak kiíratása `accomodations`
 --
 
-INSERT INTO `accomodations` (`id`, `name`, `description`, `address`, `capacity`, `basePrice`, `active`, `createdAt`) VALUES
-(1, 'Holnap háza', 'Ház egy random utcán', 'Tihamérváros 6567, Holnap Utca 24.', 3, 3500, 1, '2025-12-08');
+INSERT INTO `accomodations` (`id`, `name`, `description`, `country`, `city`, `postal`, `address`, `capacity`, `basePrice`, `active`, `createdAt`) VALUES
+(1, 'Holnap háza', 'Ház egy random utcán', 'Nagymagyarország', 'Tihamérváros', 6700, 'Holnap Utca 24.', 3, 3500, 1, '2025-12-08');
 
 -- --------------------------------------------------------
 
