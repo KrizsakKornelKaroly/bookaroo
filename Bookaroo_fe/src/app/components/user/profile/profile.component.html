@@ -1,0 +1,42 @@
+<div class="profile-wrapper d-flex align-items-center justify-content-center">
+    <div class="profile-card p-3 col-lg-7">
+
+        <h2 class="text-center mb-4">Fiókod</h2>
+        <p class="text-center mb-4 subtitle"><i class="bi bi-person"></i>&nbsp;Itt kezelheted profilod</p>
+
+        <div class="row g-4 mb-6">
+            <div class="col-12 col-xxl-6">
+                <h3 class="text-center mb-4">Név és email cím</h3>
+                <div class="form-floating mb-3 input-group">
+                    <input type="email" class="form-control" id="name" placeholder="">
+                    <label for="name">Név</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+
+            <div class="col-12 col-xxl-6">
+                <h3 class="text-center mb-4">Jelszókezelés</h3>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="oldPass" placeholder="name@example.com">
+                    <label for="floatingInput"><i class="bi bi-lock"></i>&nbsp;Régi jelszó</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="newPass" placeholder="Password">
+                    <label for="newPass"><i class="bi bi-key"></i>&nbsp;Új jelszó</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="newPassConfirm" placeholder="Password">
+                    <label for="newPassConfirm"><i class="bi bi-key"></i>&nbsp;Új jelszó újra</label>
+                </div>
+                <button class="btn btn-primary w-100" type="button" id="pass-edit"><i class="bi bi-pencil-square"></i>&nbsp;Módosítás</button>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <button class="btn btn-outline-light w-100" type="button" id="backToMain" routerLink=""><i class="bi bi-arrow-return-left"></i>&nbsp;Vissza a főoldalra</button>
+        </div>
+    </div>
+</div>
