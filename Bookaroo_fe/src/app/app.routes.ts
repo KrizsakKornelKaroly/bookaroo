@@ -6,6 +6,7 @@ import { NotfoundComponent } from './components/system/notfound/notfound.compone
 import { AccommodationListComponent } from './components/user/accommodation-list/accommodation-list.component';
 import { CalendarComponent } from './components/user/calendar/calendar.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
+import { AccPageComponent } from './components/guest/acc-page/acc-page.component';
 
 export const routes: Routes = [
     // user
@@ -29,6 +30,10 @@ export const routes: Routes = [
     {
         path: 'profile',
         component: ProfileComponent
+    },
+    {
+        path: 'accroute',
+        component: AccPageComponent
     },
 
     // general
