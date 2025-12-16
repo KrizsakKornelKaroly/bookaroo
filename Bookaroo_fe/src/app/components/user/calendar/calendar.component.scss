@@ -1,0 +1,20 @@
+:host ::ng-deep .btn-primary {
+    --bs-btn-color: #e8e8e8;
+    --bs-btn-bg: #7F0799;
+    --bs-btn-border-color: #7F0799;
+    --bs-btn-hover-color: #e8e8e8;
+    --bs-btn-hover-bg: #9649CB;
+    --bs-btn-hover-border-color: #940cb3;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #e8e8e8;
+    --bs-btn-active-bg: #940cb3;
+    --bs-btn-active-border-color: #940cb3;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #e8e8e8;
+    --bs-btn-disabled-bg: #5a066d;
+    --bs-btn-disabled-border-color: #5a066d;
+}
+
+.rowItem{
+    width: 100%;
+}
