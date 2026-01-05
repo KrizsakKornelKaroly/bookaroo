@@ -1,0 +1,99 @@
+<div class="table-wrapper d-flex align-items-center justify-content-center">
+    <div class="table-card p-4 col-lg-8">
+        <h2 class="text-center mb-2">Foglalások</h2>
+        <p class="text-center mb-5 subtitle"><i class="bi bi-shield-lock"></i>&nbsp;Admin panel: foglalások listája és kezelése</p>
+
+        <div class="row g-4">
+            <div class="col-12 col-xxl-3">
+                <div class="filter-card p-3">
+                    <h6 class="filter-title mb-3"><i class="bi bi-sliders"></i>&nbsp;Szűrés</h6>
+
+                    <div class="form-floating mb-3">
+                        <p-select [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true"
+                            [showClear]="true" placeholder="Dátum">
+                        </p-select>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <p-select [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true"
+                            [showClear]="true" placeholder="Felhasználó">
+                        </p-select>
+                    </div>
+
+                    <div class="form-floating mb-4">
+                        <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [filter]="true"
+                            [showClear]="true" placeholder="Szállás">
+                        </p-select>
+                    </div>
+
+                    <button class="btn btn-primary w-100"><i class="bi bi-search"></i>&nbsp;Keresés</button>
+                </div>
+            </div>
+
+            <div class="col-12 col-xxl-9">
+                <div class="row g-4 mb-3">
+                    <div class="col-12">
+                        <div class="accommodation-card">
+                            <img src="https://img.freepik.com/premium-photo/bright-yellow-rubber-duck-toy-isolated-white-background_983093-9038.jpg?semt=ais_hybrid&w=740&q=80" class="accommodation-img" />
+
+                            <div class="accommodation-content">
+                                <h5>Placeholder szállás cím</h5>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ullam omnis a iusto quasi vero consequuntur hic, doloribus minima rerum qui, modi praesentium reprehenderit fuga. Corrupti architecto excepturi sed illum.</p>
+
+                                <div class="meta mb-3">
+                                    <span><i class="bi bi-geo-alt"></i>&nbsp;Quack</span>
+                                    <span class="price">6000 Ft / éj</span>
+                                </div>
+
+                                <div class="columns-3 d-flex gap-3">
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil-square"></i>&nbsp;Módosítás</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-outline-light"><i class="bi bi-trash"></i>&nbsp;Törlés</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <p class="paginatorText">Oldalonként 10 <i class="bi bi-dot"></i> Összesen: y</p>
+            <!-- paginator ide -->
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Placeholder szállás cím</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="accommodationName" class="form-label">Szállás neve</label>
+                        <input type="text" class="form-control" id="accommodationName" value="Placeholder szállás neve">
+                    </div>
+                    <div class="mb-3">
+                        <label for="accommodationDescription" class="form-label">Leírás</label>
+                        <textarea class="form-control" id="accommodationDescription" rows="3" style="height: 250px;">Placeholder szállás leírás</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="accommodationPrice" class="form-label">Ár</label>
+                        <input type="number" class="form-control" id="accommodationPrice" value="">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>&nbsp;Mégse</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-floppy"></i>&nbsp;Változtatások mentése</button>
+            </div>
+        </div>
+    </div>
+</div>

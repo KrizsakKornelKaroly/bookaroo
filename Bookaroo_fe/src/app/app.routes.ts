@@ -7,6 +7,7 @@ import { AccommodationListComponent } from './components/user/accommodation-list
 import { CalendarComponent } from './components/user/calendar/calendar.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { AccPageComponent } from './components/guest/acc-page/acc-page.component';
+import { BookingsListComponent } from './components/admin/bookings-list/bookings-list.component';
 
 export const routes: Routes = [
     // user
@@ -19,6 +20,7 @@ export const routes: Routes = [
         component: RegistrationComponent
     },
 
+    // accommodation
     {
         path: 'accommodation-list',
         component: AccommodationListComponent
@@ -34,6 +36,12 @@ export const routes: Routes = [
     {
         path: 'accroute',
         component: AccPageComponent
+    },
+
+    //admin
+    {
+        path: 'bookings',
+        component: BookingsListComponent
     },
 
     // general
