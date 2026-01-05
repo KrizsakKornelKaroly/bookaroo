@@ -1,0 +1,38 @@
+.accPageMain {
+    background: rgba(46, 46, 46, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+}
+
+.btn-primary {
+    background: #7F0799;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #9649CB;
+    box-shadow: 0 0 12px rgba(150, 73, 203, 0.6);
+}
+
+.btn-outline-light {
+    border: 1px solid #AFBBF2;
+}
+
+.btn-outline-light:hover {
+    background: #AFBBF2;
+    color: #000;
+}
+
+:host ::ng-deep {
+    --p-select-focus-border-color: #D3FFF3 !important;
+    --p-input-focus-border-color: #D3FFF3 !important;
+    --p-button-focus-border-color: #D3FFF3 !important;
+    --p-form-field-float-label-focus-color: #D3FFF3 !important;
+    --p-focus-ring-color: #D3FFF3 !important;
+    --p-inputtext-focus-border-color: #D3FFF3 !important;
+}
+
+:host ::ng-deep .p-datepicker{
+    width: 100% !important;
+}

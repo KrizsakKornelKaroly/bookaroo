@@ -1,4 +1,84 @@
-<div class="col-7 mx-auto my-5">
-    <h2>Szálláshely neve</h2>
+<div class="col-7 mx-auto my-5 accPageMain p-5">
+    <h3>Szálláshely neve</h3>
     <p>Szálláshely teljes címe</p>
+
+    <div class="row mb-5">
+
+        <div class="col-8">
+
+            <div class="d-flex mb-3">
+                <div class="px-3 col-6">
+                    <img src="https://primefaces.org/cdn/primeng/images/galleria/galleria1.jpg" alt="" class="w-100">
+                </div>
+                <div class="px-3 col-6">
+                    <img src="https://primefaces.org/cdn/primeng/images/galleria/galleria2.jpg" alt="" class="w-100">
+                </div>
+            </div>
+
+            <div class="d-flex mb-3">
+                <div class="px-3 col-6">
+                    <img src="https://primefaces.org/cdn/primeng/images/galleria/galleria3.jpg" alt="" class="w-100">
+                </div>
+                <div class="px-3 col-6">
+                    <img src="https://primefaces.org/cdn/primeng/images/galleria/galleria4.jpg" alt="" class="w-100">
+                </div>
+            </div>
+
+            <div>
+                <button class="btn btn-primary w-100" label="Show" (click)="displayBasic = true">Galéria</button>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <p>Szálláshely leírása</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora accusantium nisi molestias molestiae
+                dicta impedit sit ducimus iusto accusamus, quaerat distinctio dolor enim ipsa alias. Dignissimos quam
+                laudantium corrupti quos!
+                Quam, id praesentium. Quam nulla dolorem impedit totam atque, quisquam suscipit itaque consectetur,
+                delectus aspernatur qui numquam animi corrupti dignissimos repellat. Aperiam fugiat vero, labore
+                officiis quod debitis eligendi animi?
+                Debitis nemo quaerat totam doloribus in eius aliquam dolorum! Ex non eius iure praesentium voluptate
+                minus blanditiis perferendis, necessitatibus consequuntur repellat officiis eum ea asperiores aliquam
+                saepe, sint adipisci omnis.</p>
+        </div>
+
+    </div>
+
+    <div>
+        <h5>Szabad időpontok</h5>
+
+        <div class="d-flex my-3 align-items-center gap-3">
+            <p-floatlabel variant="on" class="col-4">
+                <p-datepicker id="arrival" [iconDisplay]="'input'" [showIcon]="true" dateFormat="yy-mm-dd"
+                    class="inputFormat" />
+                <label for="arrival">Érkezés</label>
+            </p-floatlabel>
+
+            <p-floatlabel variant="on" class="col-4">
+                <p-datepicker id="leave" [iconDisplay]="'input'" [showIcon]="true" dateFormat="yy-mm-dd"
+                    class="inputFormat" />
+                <label for="leave">Távozás</label>
+            </p-floatlabel>
+
+
+            <button class="btn btn-primary w-100 py-2">Keresés</button>
+
+        </div>
+
+        <p class="fst-italic text-secondary">Még nem választott időpontot!</p>
+
+    </div>
+</div>
+
+<div class="my-4">
+    <p-galleria [value]="images" [(visible)]="displayBasic" [responsiveOptions]="responsiveOptions"
+        [containerStyle]="{'max-width': '50%'}" [numVisible]="9" [circular]="true" [fullScreen]="true"
+        [showItemNavigators]="true">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item.itemImageSrc" style="width: 100%; display: block;" />
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+            <img [src]="item.thumbnailImageSrc" style="display: block;" />
+        </ng-template>
+    </p-galleria>
 </div>
