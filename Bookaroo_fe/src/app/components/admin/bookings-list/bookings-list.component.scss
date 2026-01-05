@@ -123,6 +123,10 @@ textarea {
     resize: none;
 }
 
+li {
+    list-style-type: square;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;

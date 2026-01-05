@@ -26,7 +26,9 @@
                         </p-select>
                     </div>
 
-                    <button class="btn btn-primary w-100"><i class="bi bi-search"></i>&nbsp;Keresés</button>
+                    <button class="btn btn-primary w-100 mb-3"><i class="bi bi-search"></i>&nbsp;Keresés</button>
+
+                    <button class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#newModal"><i class="bi bi-plus-square"></i>&nbsp;Új szállás felvétele</button>
                 </div>
             </div>
 
@@ -38,12 +40,14 @@
 
                             <div class="accommodation-content">
                                 <h5>Placeholder szállás cím</h5>
-                                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ullam omnis a iusto quasi vero consequuntur hic, doloribus minima rerum qui, modi praesentium reprehenderit fuga. Corrupti architecto excepturi sed illum.</p>
-
-                                <div class="meta mb-3">
-                                    <span><i class="bi bi-geo-alt"></i>&nbsp;Quack</span>
-                                    <span class="price">6000 Ft / éj</span>
-                                </div>
+                                
+                                <ul>
+                                    <li>Név: placeholder sándor</li>
+                                    <li>Email: placeholder&#64;email.com</li>
+                                    <li>Tartózkodási idő: | 2011-01-2 | - | 2026-12-31 |</li>
+                                    <li>Éjszakák száma: 5842 éjszaka</li>
+                                    <li>Létszám: 3</li>
+                                </ul>
 
                                 <div class="columns-3 d-flex gap-3">
                                     <div>
@@ -88,6 +92,70 @@
                         <label for="accommodationPrice" class="form-label">Ár</label>
                         <input type="number" class="form-control" id="accommodationPrice" value="">
                     </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>&nbsp;Mégse</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-floppy"></i>&nbsp;Változtatások mentése</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal modal-lg fade" id="newModal" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Új szállás hozzáadása</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="accommodationName" placeholder="">
+                                <label for="accommodationName">Szállás neve</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                    style="height: 429px"></textarea>
+                                <label for="floatingTextarea2">Leírás</label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="countryName" placeholder="">
+                                <label for="countryName">Ország neve</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="cityName" placeholder="">
+                                <label for="cityName">Város neve</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="countryName" placeholder="">
+                                <label for="countryName">Ország neve</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="postalCode" placeholder="">
+                                <label for="postalCode">Postakód</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="accommodationAddress" placeholder="">
+                                <label for="accommodationAddress">Cím</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="accommodationCapacity" placeholder="">
+                                <label for="accommodationCapacity">Kapacitás</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="accommodationPrice" placeholder="0">
+                                <label for="accommodationPrice">Ár</label>
+                            </div>                            
+                        </div>
+                    </div> 
                 </form>
             </div>
             <div class="modal-footer">
