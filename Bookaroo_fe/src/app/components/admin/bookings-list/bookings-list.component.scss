@@ -66,6 +66,10 @@ h2 {
     letter-spacing: .08em;
 }
 
+textarea {
+    resize: none;
+}
+
 .accommodation-card {
     display: flex;
     gap: 16px;
@@ -84,7 +88,7 @@ h2 {
 
 .accommodation-img {
     width: 260px;
-    height: 180px;
+    height: 245px;
     object-fit: cover;
 }
 
@@ -101,30 +105,103 @@ h2 {
     margin-bottom: 6px;
 }
 
-.description {
-    font-size: .85rem;
-    color: #e8e8e8;
-    line-height: 1.4;
+.accommodation-card {
+    align-items: stretch;
 }
 
-.meta {
+.booking-details {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 12px 0;
+    font-size: .85rem;
+    color: #ccc;
+}
+
+.booking-details li {
+    padding: 3px 0;
     display: flex;
     justify-content: space-between;
-    font-size: .8rem;
-    color: #AFBBF2;
 }
 
-.price {
-    font-weight: 600;
+.booking-details strong {
+    color: #AFBBF2;
+    font-weight: 500;
+}
+
+.booking-actions {
+    margin-top: auto;
+}
+
+.booking-actions .btn {
+    font-size: .8rem;
+    padding: 6px 12px;
+}
+
+.btn.danger {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+.btn.danger:hover {
+    background: #ff6b6b;
+    color: #000;
+}
+
+.modal-content {
+    background: rgba(30, 30, 30, 0.95);
+    border: 1px solid rgba(150, 73, 203, 0.3);
+    border-radius: 16px;
+    color: #e8e8e8;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: rgba(150, 73, 203, 0.2);
+}
+
+.modal-title {
     color: #D3FFF3;
 }
 
-textarea {
-    resize: none;
+.modal label {
+    color: #AFBBF2;
 }
 
-li {
-    list-style-type: square;
+.modal .form-control,
+.modal .form-select {
+    background: #1b1b1b;
+    border: 1px solid rgba(150, 73, 203, 0.3);
+    color: #e8e8e8;
+}
+
+.modal .form-control:focus,
+.modal .form-select:focus {
+    border-color: #D3FFF3;
+    box-shadow: 0 0 10px rgba(211, 255, 243, 0.5);
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.modal-left .accommodation-select {
+    font-size: .9rem;
+    padding: 16px 15px;
+    background: #1b1b1b;
+    border: 1px solid rgba(150, 73, 203, 0.3);
+    color: #AFBBF2;
+}
+
+.modal-left .accommodation-textarea {
+    height: 356px;
+    resize: none;
+    background: #1b1b1b;
+    border: 1px solid rgba(150, 73, 203, 0.3);
+    color: #e8e8e8;
+}
+
+.modal-left .form-floating>label {
+    color: #AFBBF2;
 }
 
 @keyframes fadeInUp {

@@ -41,21 +41,21 @@
                             <div class="accommodation-content">
                                 <h5>Placeholder szállás cím</h5>
                                 
-                                <ul>
-                                    <li>Név: placeholder sándor</li>
-                                    <li>Email: placeholder&#64;email.com</li>
-                                    <li>Tartózkodási idő: | 2011-01-2 | - | 2026-12-31 |</li>
-                                    <li>Éjszakák száma: 5842 éjszaka</li>
-                                    <li>Létszám: 3</li>
+                                <ul class="booking-details">
+                                    <li><strong>Név:</strong> placeholder sándor</li>
+                                    <li><strong>Email:</strong> placeholder&#64;email.com</li>
+                                    <li><strong>Tartózkodás:</strong> 2011-01-02 → 2026-12-31</li>
+                                    <li><strong>Éjszakák:</strong> 5842</li>
+                                    <li><strong>Létszám:</strong> 3 fő</li>
                                 </ul>
-
-                                <div class="columns-3 d-flex gap-3">
-                                    <div>
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil-square"></i>&nbsp;Módosítás</button>
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-outline-light"><i class="bi bi-trash"></i>&nbsp;Törlés</button>
-                                    </div>
+                                
+                                <div class="booking-actions d-flex gap-3">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
+                                        <i class="bi bi-pencil-square"></i> Módosítás
+                                    </button>
+                                    <button class="btn btn-outline-light danger">
+                                        <i class="bi bi-trash"></i> Törlés
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -81,16 +81,16 @@
             <div class="modal-body">
                 <form>
                     <div class="mb-3">
-                        <label for="accommodationName" class="form-label">Szállás neve</label>
+                        <label for="accommodationName" class="form-label"><i class="bi bi-house"></i>&nbsp;Szállás neve</label>
                         <input type="text" class="form-control" id="accommodationName" value="Placeholder szállás neve">
                     </div>
                     <div class="mb-3">
-                        <label for="accommodationDescription" class="form-label">Leírás</label>
+                        <label for="accommodationDescription" class="form-label"><i class="bi bi-book"></i>&nbsp;Leírás</label>
                         <textarea class="form-control" id="accommodationDescription" rows="3" style="height: 250px;">Placeholder szállás leírás</textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="accommodationPrice" class="form-label">Ár</label>
-                        <input type="number" class="form-control" id="accommodationPrice" value="">
+                        <label for="accommodationPrice" class="form-label"><i class="bi bi-currency-dollar"></i>&nbsp;Ár</label>
+                        <input type="number" class="form-control" id="accommodationPrice" value="0">
                     </div>
                 </form>
             </div>
@@ -113,54 +113,52 @@
             <div class="modal-body">
                 <form>
                     <div class="row">
-                        <div class="col">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="accommodationName" placeholder="">
-                                <label for="accommodationName">Szállás neve</label>
-                            </div>
+                        <div class="col modal-left">
+                            <select class="form-select mb-3 accommodation-select">
+                                <option selected>Szállás neve</option>
+                                <option value="1">Szállás 1</option>
+                                <option value="2">Szállás 2</option>
+                                <option value="3">Szállás 3</option>
+                            </select>
+                        
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                                    style="height: 429px"></textarea>
-                                <label for="floatingTextarea2">Leírás</label>
+                                <textarea class="form-control accommodation-textarea" id="floatingTextarea2"></textarea>
+                                <label for="floatingTextarea2"><i class="bi bi-book"></i>&nbsp;Leírás</label>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="countryName" placeholder="">
-                                <label for="countryName">Ország neve</label>
+                                <label for="countryName"><i class="bi bi-map"></i>&nbsp;Ország neve</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="cityName" placeholder="">
-                                <label for="cityName">Város neve</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="countryName" placeholder="">
-                                <label for="countryName">Ország neve</label>
+                                <label for="cityName"><i class="bi bi-geo"></i>&nbsp;Város neve</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="number" class="form-control" id="postalCode" placeholder="">
-                                <label for="postalCode">Postakód</label>
+                                <label for="postalCode"><i class="bi bi-postage"></i>&nbsp;Postakód</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="accommodationAddress" placeholder="">
-                                <label for="accommodationAddress">Cím</label>
+                                <label for="accommodationAddress"><i class="bi bi-house"></i>&nbsp;Cím</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="number" class="form-control" id="accommodationCapacity" placeholder="">
-                                <label for="accommodationCapacity">Kapacitás</label>
+                                <label for="accommodationCapacity"><i class="bi bi-people"></i>&nbsp;Kapacitás</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="number" class="form-control" id="accommodationPrice" placeholder="0">
-                                <label for="accommodationPrice">Ár</label>
-                            </div>                            
+                                <label for="accommodationPrice"><i class="bi bi-currency-dollar"></i>&nbsp;Ár</label>
+                            </div>
                         </div>
                     </div> 
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>&nbsp;Mégse</button>
-                <button type="button" class="btn btn-primary"><i class="bi bi-floppy"></i>&nbsp;Változtatások mentése</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-plus-square"></i>&nbsp;Szállásfoglalás mentése</button>
             </div>
         </div>
     </div>
