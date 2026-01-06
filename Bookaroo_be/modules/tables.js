@@ -131,7 +131,7 @@ router.post('/:table/login', (req, res) => {
 // REGISTER
 router.post('/:table/registration', (req, res) => {
     let table = req.params.table;
-    let { name, email, password, confirm, phone, address } = req.body;
+    let { name, email, password, confirm } = req.body;
 
     if (!name || !email || !password || !confirm) {
         res.status(400).send({ error: "Hiányzó adatok!" });
@@ -157,7 +157,7 @@ router.post('/:table/registration', (req, res) => {
     }, req);
 
 
-    query(`INSERT INTO ${table} (name, email, password, role, phone, address) VALUES (?, ?, ?, ?, ?, ?)`, [name, email, SHA1(password).toString(), "user", phone, address], (error, results) => {
+    query(`INSERT INTO ${table} (name, email, password, role) VALUES (?, ?, ?, ?)`, [name, email, SHA1(password).toString(), "0"], (error, results) => {
         if (error) return res.status(500).json({ error: error.message });
         res.status(200).json(results);
     }, req);
