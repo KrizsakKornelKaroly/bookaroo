@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SelectModule } from 'primeng/select';
 
 @Component({
-  selector: 'app-accommodation-list',
+  selector: 'app-accommodation-management',
   standalone: true,
-  imports: [FormsModule, SelectModule],
-  templateUrl: './accommodation-list.component.html',
-  styleUrls: ['./accommodation-list.component.scss']
+  imports: [FormsModule, SelectModule, CommonModule],
+  templateUrl: './accommodation-management.component.html',
+  styleUrl: './accommodation-management.component.scss',
 })
-export class AccommodationListComponent implements OnInit {
+export class AccommodationManagementComponent implements OnInit{
   countries: any[] | undefined;
   cities: any[] | undefined;
 

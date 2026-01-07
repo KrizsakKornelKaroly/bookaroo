@@ -8,6 +8,7 @@ import { CalendarComponent } from './components/user/calendar/calendar.component
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { AccPageComponent } from './components/guest/acc-page/acc-page.component';
 import { BookingsListComponent } from './components/admin/bookings-list/bookings-list.component';
+import { AccommodationManagementComponent } from './components/admin/accommodation-management/accommodation-management.component';
 
 export const routes: Routes = [
     // user
@@ -42,6 +43,10 @@ export const routes: Routes = [
     {
         path: 'bookings',
         component: BookingsListComponent
+    },
+    {
+        path: 'accommodation-management',
+        component: AccommodationManagementComponent
     },
 
     // general
