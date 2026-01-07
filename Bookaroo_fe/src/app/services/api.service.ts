@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { ApiResponse } from '../interfaces/apires';
 import { environment } from '../environments/environment';
+import { SHA1 } from 'crypto-js';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,9 @@ export class ApiService {
 
   async registration(table: string, data: any) {
     try {
+      data.password = SHA1(data.password).toString();
+      data.confirm = SHA1(data.confirm).toString();
+
       const response = await axios.post(`${this.SERVER}/${table}/registration`, data);
       return {
         status: 200,
@@ -30,6 +34,7 @@ export class ApiService {
 
   async login(table: string, data: any) {
     try {
+      data.password = SHA1(data.password).toString();
       const response = await axios.post(`${this.SERVER}/${table}/login`, data);
       return {
         status: 200,

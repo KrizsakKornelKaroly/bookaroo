@@ -1,13 +1,19 @@
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header">
-    <img src="..." class="rounded me-2" alt="...">
-    <strong class="me-auto">Bootstrap</strong>
-    <small class="text-body-secondary">11 mins ago</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-  </div>
-  <div class="toast-body">
-    Hello, world! This is a toast message.
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div *ngIf="message" id="liveToast" class="toast show text-bg-{{message.severity}}">
+    <div class="toast-header">
+      <i class="bi {{message.icon}}"></i>&nbsp;
+      <strong class="me-auto">{{message.title}}</strong>
+      <small>{{message.timestamp | date:'HH:mm:ss'}}</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      {{message.message}}
+    </div>
   </div>
 </div>
 
-<button class="btn btn-primary">Show Toast</button>
+<!--
+<div *ngIf="message" class="alert alert-{{message.severity}} alert-dismissible fade show" role="alert">
+    <strong><i class="bi {{message.icon}}"></i> {{message.title}}</strong> - {{message.message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>-->

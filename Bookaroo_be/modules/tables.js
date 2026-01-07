@@ -3,7 +3,6 @@ const router = express.Router();
 const { query } = require('../utils/database');
 const logger = require('../utils/logger');
 var SHA1 = require("crypto-js/sha1");
-const passwdRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
@@ -114,7 +113,7 @@ router.post('/:table/login', (req, res) => {
         return;
     }
 
-    query(`SELECT * FROM ${table} WHERE email=? AND password = ?`, [email, SHA1(password).toString()], (error, results) => {
+    query(`SELECT * FROM ${table} WHERE email=? AND password = ?`, [email, password], (error, results) => {
         if (error) return res.status(500).json({ error: error.message });
         if (results.length == 0) {
             res.status(401).send({ error: "Hibás belépési adatok!" });
@@ -143,11 +142,6 @@ router.post('/:table/registration', (req, res) => {
         return;
     }
 
-    if (!password.match(passwdRegExp)) {
-        res.status(400).send({ error: "A jelszónak legalább 8 karakter hosszúnak kell lennie, tartalmaznia kell legalább egy nagybetűt, egy kisbetűt és egy számot!" });
-        return;
-    }
-
     query(`SELECT id FROM ${table} WHERE email=?`, [email], (error, results) => {
         if (error) return res.status(500).json({ error: error.message });
         if (results.length != 0) {
@@ -157,7 +151,7 @@ router.post('/:table/registration', (req, res) => {
     }, req);
 
 
-    query(`INSERT INTO ${table} (name, email, password, role) VALUES (?, ?, ?, ?)`, [name, email, SHA1(password).toString(), "0"], (error, results) => {
+    query(`INSERT INTO ${table} (name, email, password, role) VALUES (?, ?, ?, ?)`, [name, email, password, "0"], (error, results) => {
         if (error) return res.status(500).json({ error: error.message });
         res.status(200).json(results);
     }, req);

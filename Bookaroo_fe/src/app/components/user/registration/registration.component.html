@@ -5,27 +5,27 @@
         <p class="text-center mb-4 subtitle"><i class="bi bi-luggage"></i>&nbsp;Foglalj kényelmesen, bárhol, bármikor</p>
 
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="name" placeholder="">
+            <input type="text" class="form-control" id="name" placeholder="" [(ngModel)]="newUser.name">
             <label for="name"><i class="bi bi-fonts"></i>&nbsp;Név <em>*</em></label>
         </div>
 
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" placeholder="">
+            <input type="email" class="form-control" id="email" placeholder="" [(ngModel)]="newUser.email">
             <label for="email"><i class="bi bi-envelope-at"></i>&nbsp;E-mail cím <em>*</em></label>
         </div>
 
         <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="password" placeholder="">
+            <input type="password" class="form-control" id="password" placeholder="" [(ngModel)]="newUser.password">
             <label for="password"><i class="bi bi-lock"></i>&nbsp;Jelszó <em>*</em></label>
         </div>
 
         <div class="form-floating mb-4">
-            <input type="password" class="form-control" id="confirm" placeholder="">
+            <input type="password" class="form-control" id="confirm" placeholder="" [(ngModel)]="newUser.confirm">
             <label for="confirm"><i class="bi bi-lock"></i>&nbsp;Jelszó újra <em>*</em></label>
         </div>
 
         <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" id="acceptTerms">
+            <input class="form-check-input" type="checkbox" id="acceptTerms" [(ngModel)]="acceptedTerms">
             <label class="form-check-label" for="acceptTerms">
                 Általános feltételek elfogadása <em>*</em>
             </label>
