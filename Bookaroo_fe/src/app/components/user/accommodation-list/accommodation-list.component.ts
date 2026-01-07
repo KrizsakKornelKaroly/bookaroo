@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SelectModule } from 'primeng/select';
+import { ApiService } from '../../../services/api.service';
+import { Accommodation } from '../../../interfaces/accommodation';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-accommodation-list',
   standalone: true,
-  imports: [FormsModule, SelectModule],
+  imports: [FormsModule, SelectModule, CommonModule],
   templateUrl: './accommodation-list.component.html',
   styleUrls: ['./accommodation-list.component.scss']
 })
 export class AccommodationListComponent implements OnInit {
+  constructor(
+    private api: ApiService
+  ) {}
+
+  accommodations: Accommodation[] = []
+
   countries: any[] | undefined;
   cities: any[] | undefined;
 
@@ -17,7 +26,6 @@ export class AccommodationListComponent implements OnInit {
   selectedCity: string | undefined;
 
   ngOnInit() {
-
     this.countries = [
       { name: 'Australia', code: 'AU' },
       { name: 'Brazil', code: 'BR' },
@@ -38,5 +46,14 @@ export class AccommodationListComponent implements OnInit {
       { name: 'Houston', code: 'HO' },
       { name: 'Phoenix', code: 'PH' }
     ]
+
+    this.getAccommodations()
+  }
+
+  getAccommodations() {
+    this.api.selectAll('accommodations').then(res => {
+      this.accommodations = res.data
+      console.log(this.accommodations)
+    })
   }
 }
