@@ -14,3 +14,5 @@
 [2026-01-07 09:59:11] [32minfo[39m: [POST /users/registration]: 1 record(s) affected. | Lasted 11 ms
 [2026-01-07 10:00:52] [32minfo[39m: [POST /users/registration]: 0 record(s) affected. | Lasted 2 ms
 [2026-01-07 10:00:52] [32minfo[39m: [POST /users/registration]: 1 record(s) affected. | Lasted 4 ms
+[2026-01-07 11:01:19] [32minfo[39m: Server started on port 3000
+[2026-01-07 11:06:17] [31merror[39m: [DB Error]: ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist

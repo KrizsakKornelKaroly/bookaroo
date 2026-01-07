@@ -13,7 +13,7 @@ export class MessageService {
 
   show(severity : Message['severity'], title: string, message : string){
     this.messageSubject.next({severity, title, message, timestamp: new Date()});
-    setTimeout(() => {this.hide()}, 3000);
+    setTimeout(() => {this.hide()}, 5000);
   }
   private hide(){
     this.messageSubject.next(null);
