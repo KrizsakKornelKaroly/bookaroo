@@ -181,6 +181,16 @@ textarea {
     color: #000;
 }
 
+.btn.success {
+    border-color: #8bff91;
+    color: #9cf5a0;
+}
+
+.btn.success:hover {
+    background: #8bff91;
+    color: #000;
+}
+
 .modal-content {
     background: rgba(30, 30, 30, 0.95);
     border: 1px solid rgba(150, 73, 203, 0.3);

@@ -51,7 +51,7 @@
                                 
                                 <div class="booking-actions d-flex gap-3">
                                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil-square"></i>&nbsp;Módosítás</button>
-                                    <button class="btn btn-outline-light danger"><i class="bi bi-trash"></i>&nbsp;Törlés</button>
+                                    <button class="btn btn-outline-light danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i>&nbsp;Törlés</button>
                                 </div>
                             </div>
                         </div>
@@ -155,6 +155,25 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>&nbsp;Mégse</button>
                 <button type="button" class="btn btn-primary"><i class="bi bi-plus-square"></i>&nbsp;Szállásfoglalás mentése</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteModalLabel">Foglalás törlése</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Biztos, hogy törölni akarod ezt a Foglalást?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>&nbsp;Mégsem</button>
+                <button type="button" class="btn btn-outline-light danger"><i class="bi bi-trash"></i>&nbsp;Törlés megerősítése</button>
             </div>
         </div>
     </div>
