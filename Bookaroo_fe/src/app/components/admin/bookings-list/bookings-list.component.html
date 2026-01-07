@@ -77,16 +77,28 @@
             <div class="modal-body">
                 <form>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="accommodationName" placeholder="Szállás neve">
-                        <label for="accommodationName" class="form-label"><i class="bi bi-house"></i>&nbsp;Szállás neve</label>
+                        <input type="text" class="form-control" id="accommodationName" placeholder="">
+                        <label for="accommodationName" class="form-label"><i class="bi bi-house"></i>&nbsp;Foglaló neve</label>
                     </div>
+
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" id="accommodationDescription" rows="3" style="height: 250px;" placeholder="Leírás"></textarea>
-                        <label for="accommodationDescription" class="form-label"><i class="bi bi-book"></i>&nbsp;Leírás</label>
+                        <input type="text" class="form-control" id="email" placeholder="">
+                        <label for="email" class="form-label"><i class="bi bi-envelope"></i>&nbsp;Email</label>
                     </div>
+                    
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="accommodationPrice" placeholder="0">
-                        <label for="accommodationPrice" class="form-label"><i class="bi bi-currency-dollar"></i>&nbsp;Ár</label>
+                        <input type="date" class="form-control" id="checkInDate">
+                        <label for="checkInDate" class="form-label"><i class="bi bi-calendar"></i>&nbsp;Bejelentkezés dátuma</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="date" class="form-control" id="checkOutDate">
+                        <label for="checkOutDate" class="form-label"><i class="bi bi-calendar"></i>&nbsp;Kijelentkezés dátuma</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="guestCount" placeholder="">
+                        <label for="guestCount" class="form-label"><i class="bi bi-people"></i>&nbsp;Létszám</label>
                     </div>
                 </form>
             </div>
@@ -116,10 +128,15 @@
                                 <option value="2">Szállás 2</option>
                                 <option value="3">Szállás 3</option>
                             </select>
-    
-                            <div class="form-floating">
-                                <textarea class="form-control accommodation-textarea" id="floatingTextarea2" placeholder="Leírás"></textarea>
-                                <label for="floatingTextarea2" class="form-label"><i class="bi bi-book"></i>&nbsp;Leírás</label>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="">
+                                <label for="name"><i class="bi bi-person"></i>&nbsp;Név</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="emailAddress" placeholder="">
+                                <label for="emailAddress"><i class="bi bi-envelope"></i>&nbsp;Email cím</label>
                             </div>
                         </div>
 
@@ -134,7 +151,7 @@
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="number" class="form-control" id="postalCode" placeholder="">
-                                <label for="postalCode"><i class="bi bi-postage"></i>&nbsp;Postakód</label>
+                                <label for="postalCode"><i class="bi bi-postage"></i>&nbsp;Irányítószám</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="accommodationAddress" placeholder="">
@@ -143,10 +160,6 @@
                             <div class="form-floating mb-3">
                                 <input type="number" class="form-control" id="accommodationCapacity" placeholder="">
                                 <label for="accommodationCapacity"><i class="bi bi-people"></i>&nbsp;Kapacitás</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="accommodationPrice" placeholder="0">
-                                <label for="accommodationPrice"><i class="bi bi-currency-dollar"></i>&nbsp;Ár</label>
                             </div>
                         </div>
                     </div> 
