@@ -28,18 +28,18 @@
 
             <div class="col-12 col-xxl-9">
 
-                <div class="row g-4 mb-3">
+                <div class="row g-4 mb-3" *ngFor="let accommodation of accommodations; let i = index;">
                     <div class="col-12">
                         <div class="accommodation-card">
                             <img src="https://img.freepik.com/premium-photo/bright-yellow-rubber-duck-toy-isolated-white-background_983093-9038.jpg?semt=ais_hybrid&w=740&q=80" class="accommodation-img" />
 
                             <div class="accommodation-content">
-                                <h5>Placeholder cím</h5>
-                                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ullam omnis a iusto quasi vero consequuntur hic, doloribus minima rerum qui, modi praesentium reprehenderit fuga. Corrupti architecto excepturi sed illum.</p>
+                                <h5>{{ accommodation.name }}</h5>
+                                <p class="description">{{ accommodation.description }}</p>
 
                                 <div class="meta">
-                                    <span><i class="bi bi-geo-alt"></i>&nbsp;Quack</span>
-                                    <span class="price">6700 Ft / éj</span>
+                                    <span><i class="bi bi-geo-alt"></i>&nbsp;{{ accommodation.country }}, {{ accommodation.city }}, {{ accommodation.address }}</span>
+                                    <span class="price">{{ accommodation.basePrice }}    Ft / éj</span>
                                 </div>
 
                                 <div class="booking-actions">
