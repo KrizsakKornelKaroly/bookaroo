@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ApiService } from '../../../services/api.service';
 import { User } from '../../../interfaces/user';
 import { MessageComponent } from "../../system/message/message.component";
@@ -19,7 +19,8 @@ export class RegistrationComponent {
 
   constructor(
     private api: ApiService,
-    private message: MessageService
+    private message: MessageService,
+    private router: Router
   ) { }
 
   acceptedTerms : boolean = false;
@@ -58,6 +59,7 @@ export class RegistrationComponent {
       };
       this.acceptedTerms = false;
       this.message.show('success', 'Siker', 'A regisztráció sikeres volt.');
+      this.router.navigate(['/login']);
     })
   }
 }

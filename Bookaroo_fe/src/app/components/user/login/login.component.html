@@ -5,12 +5,12 @@
         <p class="text-center mb-4 subtitle"><i class="bi bi-door-open"></i>&nbsp;Lépj be, és foglalj tovább</p>
 
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" placeholder="">
+            <input type="email" class="form-control" id="email" placeholder="" [(ngModel)]="user.email">
             <label for="email"><i class="bi bi-envelope-at"></i>&nbsp;E-mail cím <em>*</em></label>
         </div>
 
         <div class="form-floating mb-4">
-            <input type="password" class="form-control" id="password" placeholder="">
+            <input type="password" class="form-control" id="password" placeholder="" [(ngModel)]="user.password">
             <label for="password"><i class="bi bi-lock"></i>&nbsp;Jelszó <em>*</em></label>
         </div>
 
@@ -37,3 +37,5 @@
 
     </div>
 </div>
+
+<app-message></app-message>
