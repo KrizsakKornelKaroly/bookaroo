@@ -1,4 +1,4 @@
-export interface Accommodation {
+export interface Bookings {
     id: number,
     userId: number,
     accommodationId: number,

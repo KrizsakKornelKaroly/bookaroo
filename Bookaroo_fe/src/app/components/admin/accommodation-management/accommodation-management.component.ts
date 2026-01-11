@@ -13,8 +13,8 @@ import { Accommodation } from '../../../interfaces/accommodation';
   styleUrl: './accommodation-management.component.scss',
 })
 export class AccommodationManagementComponent implements OnInit{
-   constructor(
-      private api: ApiService
+  constructor(
+    private api: ApiService
   ) {}
   
   accommodations: Accommodation[] = []

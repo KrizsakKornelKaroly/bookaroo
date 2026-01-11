@@ -28,26 +28,26 @@
 
                     <button class="btn btn-primary w-100 mb-3"><i class="bi bi-search"></i>&nbsp;Keresés</button>
 
-                    <button class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#newModal"><i class="bi bi-plus-square"></i>&nbsp;Új szállás felvétele</button>
+                    <button class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#newModal"><i class="bi bi-plus-square"></i>&nbsp;Új foglalás felvétele</button>
                 </div>
             </div>
 
             <div class="col-12 col-xxl-9">
 
-                <div class="row g-4 mb-3">
+                <div class="row g-4 mb-3" *ngFor="let booking of enrichedBookings; let i = index;">
                     <div class="col-12">
                         <div class="accommodation-card">
                             <img src="https://img.freepik.com/premium-photo/bright-yellow-rubber-duck-toy-isolated-white-background_983093-9038.jpg?semt=ais_hybrid&w=740&q=80" class="accommodation-img" />
 
                             <div class="accommodation-content">
-                                <h5>Placeholder szállásfoglalás cím</h5>
+                                <h5>{{ booking.accommodation?.name }}</h5>
                                 
                                 <ul class="booking-details">
-                                    <li><strong>Név:</strong> placeholder sándor</li>
-                                    <li><strong>Email:</strong> placeholder&#64;email.com</li>
-                                    <li><strong>Tartózkodás:</strong> 2011-01-02 → 2026-12-31</li>
-                                    <li><strong>Éjszakák:</strong> 5842</li>
-                                    <li><strong>Létszám:</strong> 3 fő</li>
+                                    <li><strong>Név:</strong> {{ booking.user?.name }}</li>
+                                    <li><strong>Email:</strong> {{ booking.user?.email }}</li>
+                                    <li><strong>Tartózkodás:</strong> {{ booking.startDate | date:'yyyy-MM-dd'}} → {{ booking.endDate | date:'yyyy-MM-dd' }}</li>
+                                    <li><strong>Éjszakák:</strong> {{ booking.nights }}</li>
+                                    <li><strong>Létszám:</strong> {{ booking.persons }} fő</li>
                                 </ul>
                                 
                                 <div class="booking-actions d-flex gap-3">
