@@ -1,3 +1,7 @@
+.whole {
+    animation: fadeInUp .6s ease;
+}
+
 .titleBar {
     background-image: url('../../../../../public/titlebarBg.png');
     height: 500px;
@@ -52,6 +56,19 @@ h3 {
     width: 23%;
     height: auto;
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 :host ::ng-deep .p-button {
     color: #e8e8e8;
     background: #7F0799;
