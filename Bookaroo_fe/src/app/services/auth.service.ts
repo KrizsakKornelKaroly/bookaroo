@@ -50,7 +50,7 @@ export class AuthService {
 
   isAdmin() : boolean {
     const user = this.loggedUser();
-    if(user) return user[0].role === 'admin';
+    if(user) return user[0].role === 1;
     return false;
   }
 

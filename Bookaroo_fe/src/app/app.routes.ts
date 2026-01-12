@@ -9,6 +9,7 @@ import { ProfileComponent } from './components/user/profile/profile.component';
 import { AccPageComponent } from './components/guest/acc-page/acc-page.component';
 import { BookingsListComponent } from './components/admin/bookings-list/bookings-list.component';
 import { AccommodationManagementComponent } from './components/admin/accommodation-management/accommodation-management.component';
+import { MybookingsComponent } from './components/user/mybookings/mybookings.component';
 
 export const routes: Routes = [
     // user
@@ -39,9 +40,16 @@ export const routes: Routes = [
         component: AccPageComponent
     },
 
+    //users
+    {
+        path: 'mybookings',
+        component: MybookingsComponent
+    },
+
+
     //admin
     {
-        path: 'bookings',
+        path: 'booking-management',
         component: BookingsListComponent
     },
     {

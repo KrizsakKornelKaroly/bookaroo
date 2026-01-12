@@ -10,29 +10,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
-        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
-          <a class="nav-link active mainNavLink" aria-current="page" href="#">Főoldal</a>
+        <li class="nav-item mb-sm-3 mb-lg-0 mainNav" *ngFor="let item of menuItems">
+          <a class="nav-link active mainNavLink" aria-current="page" [routerLink]="item.route">{{item.label}}</a>
         </li>
-
-        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
-          <a class="nav-link active mainNavLink" aria-current="page" href="" routerLink="/accommodation-list">Szállások</a>
-        </li>
-
-
-        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
-          <a class="nav-link active mainNavLink" aria-current="page" href="" routerLink="/accommodation-management">Szállások kezelése</a>
-        </li>
-
-
-        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
-          <a class="nav-link active mainNavLink" aria-current="page" href="" routerLink="/bookings">Foglalások</a>
-        </li>
-
-
-        <li class="nav-item mb-sm-3 mb-lg-0 mainNav">
-          <a class="nav-link active mainNavLink" aria-current="page" href="" routerLink="/calendar">Naptár</a>
-        </li>
-
       </ul>
 
       
@@ -56,10 +36,6 @@
 
           <li class="nav-item mb-sm-3 mb-lg-0">
             <a class="nav-link active" aria-current="page" routerLink="/login">Bejelentkezés</a>
-          </li>
-
-          <li class="nav-item mb-sm-3 mb-lg-0">
-            <a class="nav-link active" aria-current="page" routerLink="/registration">Regisztráció</a>
           </li>
 
         </ul>
