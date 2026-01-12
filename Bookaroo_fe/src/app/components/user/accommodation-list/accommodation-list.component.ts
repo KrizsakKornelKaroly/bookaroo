@@ -53,7 +53,6 @@ export class AccommodationListComponent implements OnInit {
   getAccommodations() {
     this.api.selectAll('accommodations').then(res => {
       this.accommodations = res.data
-      console.log(this.accommodations)
     })
   }
 }

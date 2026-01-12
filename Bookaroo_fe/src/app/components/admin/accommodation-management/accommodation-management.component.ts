@@ -21,9 +21,31 @@ export class AccommodationManagementComponent implements OnInit{
   
   accommodations: Accommodation[] = []
   selectedAccommodation: Accommodation | null = null;
+  newAccommodation: Accommodation = this.getNewAccommodationTemplate();
 
   countries: any[] | undefined;
   cities: any[] | undefined;
+
+  getNewAccommodationTemplate(): Accommodation {
+    return {
+      id: 0,
+      name: '',
+      description: '',
+      country: '',
+      city: '',
+      postal: 0,
+      address: '',
+      capacity: 1,
+      basePrice: 0,
+      active: true,
+      createdAt: new Date()
+    };
+  }
+
+  prepareNew() {
+    this.newAccommodation = this.getNewAccommodationTemplate();
+    this.selectedAccommodation = null;
+  }
 
   selectedCountry: string | undefined;
   selectedCity: string | undefined;
@@ -56,7 +78,6 @@ export class AccommodationManagementComponent implements OnInit{
   getAccommodations() {
     this.api.selectAll('accommodations').then(res => {
       this.accommodations = res.data
-      console.log(this.accommodations)
     })
   }
 
@@ -88,23 +109,12 @@ export class AccommodationManagementComponent implements OnInit{
       return;
     }
 
-    const newAccommodation: Accommodation = {
-      id: 0,
-      name: 'Szállás',
-      description: 'Leírás',
-      country: 'Ország',
-      city: 'Város',
-      postal: 1,
-      address: 'Cím',
-      capacity: 1,
-      basePrice: 1,
-      active: true,
-      createdAt: new Date()
-    };
+    const toInsert: Accommodation = { ...this.newAccommodation, id: 0, createdAt: this.newAccommodation.createdAt || new Date() };
 
-    this.api.insert('accommodations', newAccommodation).then(res => {
+    this.api.insert('accommodations', toInsert).then(res => {
       this.getAccommodations();
       this.message.show('success', 'Siker', 'Új szállás hozzáadva!');
+      this.newAccommodation = this.getNewAccommodationTemplate();
 
       const newModalEl = document.getElementById('newModal');
       if (newModalEl) {
